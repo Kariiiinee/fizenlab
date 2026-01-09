@@ -75,6 +75,17 @@ a {
 
 ul {
     list-style: none;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+    color: var(--color-text-light);
+}
+
+ol {
+    list-style: none;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+    list-style-type: decimal;
+    color: var(--color-text-light);
 }
 
 img {
@@ -850,6 +861,7 @@ img {
     list-style-type: disc;
     color: var(--color-text-light);
 }
+
 
 /* Small Button for Approaches Cards */
 .btn-sm {
