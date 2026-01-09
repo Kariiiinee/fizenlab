@@ -205,7 +205,7 @@ img {
     padding-top: 140px;
     /* Header height + spacing */
     padding-bottom: var(--spacing-xl);
-    background-color: var(--color-white);
+    background-color: var(--color-primary);
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -254,11 +254,18 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('images/Background Ripple effect HQ.gif');
+    background: url;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-background {
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 /* Values Section */
@@ -744,4 +751,274 @@ img {
     background: #f4f4f4;
     padding: var(--spacing-md);
     border-radius: var(--border-radius-sm);
+}
+
+/* Resources Page Styles */
+.page-header {
+    padding-top: 140px;
+    padding-bottom: var(--spacing-lg);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.page-header h1 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+}
+
+.sticky-nav {
+    background-color: var(--color-white);
+    position: sticky;
+    top: 80px;
+    /* Adjust based on main header height */
+    z-index: 900;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
+    margin-bottom: var(--spacing-lg);
+    overflow-x: auto;
+}
+
+.sticky-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    white-space: nowrap;
+}
+
+.sticky-nav a {
+    color: var(--color-text-light);
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.sticky-nav a:hover,
+.sticky-nav a.active {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.resources-content {
+    max-width: 800px;
+    /* Better readability */
+    margin: 0 auto var(--spacing-xl);
+}
+
+.resource-section {
+    margin-bottom: var(--spacing-xl);
+    scroll-margin-top: 160px;
+    /* Offset for sticky headers */
+}
+
+.resource-section h2 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.resource-section .content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.resource-section ul,
+.resource-section ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.resource-section li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+    color: var(--color-text-light);
+}
+
+.resource-section ol li {
+    list-style-type: decimal;
+}
+
+/* Small Button for Approaches Cards */
+.btn-sm {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    margin-top: var(--spacing-sm);
+    border-width: 1px;
+}
+
+@media (max-width: 768px) {
+    .sticky-nav ul {
+        justify-content: flex-start;
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+/* Language Switcher */
+.lang-switcher {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0 var(--spacing-xs);
+    display: flex;
+    align-items: center;
+}
+
+.current-lang {
+    padding: 5px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.lang-switcher:hover .current-lang {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--color-white);
+    border: 1px solid #eee;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-soft);
+    display: none;
+    flex-direction: column;
+    min-width: 60px;
+    z-index: 1000;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.lang-switcher:hover .lang-dropdown {
+    display: flex;
+    animation: fadeIn 0.2s ease;
+}
+
+.lang-option {
+    padding: 8px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1.2rem;
+}
+
+.lang-option:hover {
+    background-color: #f5f5f5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hide Google Translate Toolbar */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+
+#google_translate_element {
+    display: none;
+}
+
+/* Bonheur Section Images */
+#bonheur .content p img {
+    width: 120px;
+    /* Small fixed width */
+    height: auto;
+    float: left;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    /* Optional soft corners */
+    object-fit: contain;
+}
+
+#bonheur .content p {
+    min-height: 80px;
+    /* Ensures text block is at least as tall as image */
+    overflow: hidden;
+    /* Clears the float within the paragraph */
+    margin-bottom: 2rem;
+}
+
+/* quotidien Section Images */
+#quotidien .content p img {
+    width: 120px;
+    /* Small fixed width */
+    height: auto;
+    float: left;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    /* Optional soft corners */
+    object-fit: contain;
+}
+
+#quotidien .content p {
+    min-height: 80px;
+    /* Ensures text block is at least as tall as image */
+    overflow: hidden;
+    /* Clears the float within the paragraph */
+    margin-bottom: 2rem;
+}
+
+/* Info Block Layout for Resources */
+.info-block {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+.info-block img {
+    width: 100px;
+    /* Adjusted size */
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin: 0;
+    /* Override previous margins */
+    border-radius: 8px;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-content ul,
+.info-content ol {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+/* Reset specific overrides if needed */
+#bonheur .content p img,
+#quotidien .content p img {
+    float: none;
+    margin: 0;
+}
+
+/* Fix Quote Color */
+.resource-section i {
+    color: var(--color-text-light);
+    display: block;
+    /* Optional: makes quotes stand out more as blocks if desired, or keep inline */
+    margin-top: 0.5rem;
 }
