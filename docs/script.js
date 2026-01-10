@@ -46,6 +46,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Sticky Nav Horizontal Scroll Arrows
+    const navScrollContainer = document.querySelector('.nav-scroll-container');
+    const leftArrow = document.querySelector('.nav-arrow-left');
+    const rightArrow = document.querySelector('.nav-arrow-right');
+
+    if (navScrollContainer && leftArrow && rightArrow) {
+        const scrollAmount = 200; // pixels to scroll on each click
+
+        // Function to update arrow visibility
+        function updateArrowVisibility() {
+            const scrollLeft = navScrollContainer.scrollLeft;
+            const maxScroll = navScrollContainer.scrollWidth - navScrollContainer.clientWidth;
+
+            // Hide left arrow if at the start
+            if (scrollLeft <= 0) {
+                leftArrow.classList.add('hidden');
+            } else {
+                leftArrow.classList.remove('hidden');
+            }
+
+            // Hide right arrow if at the end
+            if (scrollLeft >= maxScroll - 1) {
+                rightArrow.classList.add('hidden');
+            } else {
+                rightArrow.classList.remove('hidden');
+            }
+        }
+
+        // Scroll left
+        leftArrow.addEventListener('click', () => {
+            navScrollContainer.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Scroll right
+        rightArrow.addEventListener('click', () => {
+            navScrollContainer.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Update arrow visibility on scroll
+        navScrollContainer.addEventListener('scroll', updateArrowVisibility);
+
+        // Initial check
+        updateArrowVisibility();
+
+        // Update on window resize
+        window.addEventListener('resize', updateArrowVisibility);
+    }
+
     // Fade-in animation on scroll using Intersection Observer
     const observerOptions = {
         threshold: 0.1,

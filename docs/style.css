@@ -812,7 +812,29 @@ img {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     padding: 1rem 0;
     margin-bottom: var(--spacing-lg);
+}
+
+.sticky-nav .container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.nav-scroll-container {
+    flex: 1;
     overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.nav-scroll-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 .sticky-nav ul {
@@ -820,6 +842,34 @@ img {
     justify-content: center;
     gap: var(--spacing-md);
     white-space: nowrap;
+    margin: 0;
+    padding: 0 var(--spacing-sm);
+}
+
+.nav-arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 0 0.5rem;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+.nav-arrow:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.nav-arrow:active {
+    transform: scale(1.1);
+}
+
+.nav-arrow.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .sticky-nav a {
@@ -895,6 +945,11 @@ img {
     .sticky-nav ul {
         justify-content: flex-start;
         padding: 0 var(--spacing-sm);
+    }
+
+    .nav-arrow {
+        font-size: 1.5rem;
+        padding: 0 0.25rem;
     }
 }
 
