@@ -27,10 +27,10 @@
 
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#Approches" class="nav-link">Approches</a></li>
-                    <li><a href="ressources.html" class="nav-link">Ressources</a></li>
-                    <li><a href="#solutions" class="nav-link">Solutions</a></li>
-                    <li><a href="#a-propos" class="nav-link">À Propos</a></li>
+                    <li><a href="#Approches" class="nav-link" data-i18n="nav.approches">Approches</a></li>
+                    <li><a href="ressources.html" class="nav-link" data-i18n="nav.ressources">Ressources</a></li>
+                    <li><a href="#solutions" class="nav-link" data-i18n="nav.solutions">Solutions</a></li>
+                    <li><a href="#a-propos" class="nav-link" data-i18n="nav.apropos">À Propos</a></li>
 
                     <!-- Language Switcher -->
                     <li class="lang-switcher">
@@ -41,7 +41,7 @@
                         </div>
                     </li>
 
-                    <li><a href="#login" class="btn btn-primary btn-block">Se connecter</a></li>
+                    <li><a href="#login" class="btn btn-primary btn-block" data-i18n="nav.login">Se connecter</a></li>
                 </ul>
             </nav>
 
@@ -57,24 +57,31 @@
         <!-- Hero Section -->
         <section id="accueil" class="hero">
             <div class="container hero-content">
-                <h1 class="hero-title" style="text-align: center;">Un premier pas qui peut tout changer. Booste ta
-                    <span class="accent-text"> santé financière</span> ici!
+                <h1 class="hero-title" style="text-align: center;"><span data-i18n="hero.title.part1">Un premier pas qui
+                        peut tout changer. Booste ta</span>
+                    <span class="accent-text" data-i18n="hero.title.accent">santé financière</span> <span
+                        data-i18n="hero.title.part2">ici!</span>
                 </h1>
-                <p class="hero-subtitle" style="text-align: center;">La clé ? Pas de solutions miracles, mais des
+                <p class="hero-subtitle" style="text-align: center;" data-i18n="hero.subtitle">La clé ? Pas de solutions
+                    miracles, mais des
                     approches simples et durables.
                     Offre-toi ce moment pour reprendre le contrôle de ton argent.</p>
                 <div class="hero-actions" style="text-align: center;">
-                    <a href="questionnaire.html" class="btn btn-secondary" style="border-color: #fff; color: #fff;">Je
+                    <a href="questionnaire.html" class="btn btn-secondary" style="border-color: #fff; color: #fff;"
+                        data-i18n="hero.btn.test">Je
                         me
                         teste*</a>
-                    <a href="ressources.html" class="btn btn-secondary" style="border-color: #fff; color: #fff;">Explore
+                    <a href="ressources.html" class="btn btn-secondary" style="border-color: #fff; color: #fff;"
+                        data-i18n="hero.btn.resources">Explore
                         les
                         ressources</a>
-                    <a href="#solutions" class="btn btn-secondary" style="border-color: #fff; color: #fff;">Découvre
+                    <a href="#solutions" class="btn btn-secondary" style="border-color: #fff; color: #fff;"
+                        data-i18n="hero.btn.solutions">Découvre
                         les solutions</a>
                 </div>
                 <p>
-                    <font size="2" color="white" style="text-align: center;"><i>*Le questionnaire est destiné à être
+                    <font size="2" color="white" style="text-align: center;"><i data-i18n="hero.disclaimer">*Le
+                            questionnaire est destiné à être
                             utilisé seulement comme un
                             outil d'auto-évaluation
                             et permet
@@ -88,58 +95,71 @@
         <section id="Approches" class="Value">
             <div class="container" style="margin-top: 50px;">
                 <div class="section-header">
-                    <span class="section-tag">Approches</span>
+                    <span class="section-tag" data-i18n="approaches.tag">Approches</span>
                 </div>
-                <h3 style="text-align: center;">Comprendre, appliquer et suivre les approches qui fonctionnent
+                <h3 style="text-align: center;" data-i18n="approaches.title">Comprendre, appliquer et suivre les
+                    approches qui fonctionnent
                     pour toi.</h3>
             </div>
             <div class="container values-grid">
                 <div class="value-card">
                     <div class="icon">1</div>
-                    <h3>Bonheur et Argent</h3>
-                    <p>Le bonheur est souvent influencé par les expériences personnelles, les contextes et les
+                    <h3 data-i18n="approaches.1.title">Bonheur et Argent</h3>
+                    <p data-i18n="approaches.1.desc">Le bonheur est souvent influencé par les expériences personnelles,
+                        les contextes et les
                         valeurs.
                         Cependant, le bonheur, c'est plus que simplement avoir de l'argent. </p>
-                    <a href="ressources.html#bonheur" class="btn btn-secondary btn-sm">En savoir plus</a>
+                    <a href="ressources.html#bonheur" class="btn btn-secondary btn-sm" data-i18n="approaches.btn">En
+                        savoir plus</a>
                 </div>
                 <div class="value-card">
                     <div class="icon">2</div>
-                    <h3>L'argent au quotidien</h3>
-                    <p>L'argent est une partie vitale de nos vies quotidiennes. Il influence de nombreux aspects de
+                    <h3 data-i18n="approaches.2.title">L'argent au quotidien</h3>
+                    <p data-i18n="approaches.2.desc">L'argent est une partie vitale de nos vies quotidiennes. Il
+                        influence de nombreux aspects de
                         notre existence, nos décisions et notre bien-être général. </p>
-                    <a href="ressources.html#quotidien" class="btn btn-secondary btn-sm">En savoir plus</a>
+                    <a href="ressources.html#quotidien" class="btn btn-secondary btn-sm" data-i18n="approaches.btn">En
+                        savoir plus</a>
                 </div>
                 <div class="value-card">
                     <div class="icon">3</div>
-                    <h3>Economiser et Epargner</h3>
-                    <p>Économiser de l'argent pour epargner peut être difficile pour beaucoup de gens, et cela est
+                    <h3 data-i18n="approaches.3.title">Economiser et Epargner</h3>
+                    <p data-i18n="approaches.3.desc">Économiser de l'argent pour epargner peut être difficile pour
+                        beaucoup de gens, et cela est
                         dû à
                         un mélange de facteurs externes et d'habitudes personnelles. </p>
-                    <a href="ressources.html#economiser" class="btn btn-secondary btn-sm">En savoir plus</a>
+                    <a href="ressources.html#economiser" class="btn btn-secondary btn-sm" data-i18n="approaches.btn">En
+                        savoir plus</a>
                 </div>
                 <div class="value-card">
                     <div class="icon">4</div>
-                    <h3>Maitriser ses dépenses</h3>
-                    <p>Dépenser moins d'argent chaque jour et économiser davantage implique un mélange d'habitudes
+                    <h3 data-i18n="approaches.4.title">Maitriser ses dépenses</h3>
+                    <p data-i18n="approaches.4.desc">Dépenser moins d'argent chaque jour et économiser davantage
+                        implique un mélange d'habitudes
                         réfléchies, de planification stratégique et de gestion financière disciplinée.</p>
-                    <a href="ressources.html#depenses" class="btn btn-secondary btn-sm">En savoir plus</a>
+                    <a href="ressources.html#depenses" class="btn btn-secondary btn-sm" data-i18n="approaches.btn">En
+                        savoir plus</a>
                 </div>
                 <div class="value-card">
                     <div class="icon">5</div>
-                    <h3>Revenus semi-passifs</h3>
-                    <p>Génerer des revenus semi-passifs peut offrir de nombreux avantages, rendant votre vie
+                    <h3 data-i18n="approaches.5.title">Revenus semi-passifs</h3>
+                    <p data-i18n="approaches.5.desc">Génerer des revenus semi-passifs peut offrir de nombreux avantages,
+                        rendant votre vie
                         financière
                         plus stable et libre. </p>
-                    <a href="ressources.html#semi-passifs" class="btn btn-secondary btn-sm">En savoir plus</a>
+                    <a href="ressources.html#semi-passifs" class="btn btn-secondary btn-sm"
+                        data-i18n="approaches.btn">En savoir plus</a>
                 </div>
                 <div class="value-card">
                     <div class="icon">6</div>
-                    <h3>Mes approches préféréés</h3>
-                    <p>La meilleure méthode dépendra du capital dont vous disposez pour démarrer, mais la bonne
+                    <h3 data-i18n="approaches.6.title">Mes approches préféréés</h3>
+                    <p data-i18n="approaches.6.desc">La meilleure méthode dépendra du capital dont vous disposez pour
+                        démarrer, mais la bonne
                         nouvelle
                         est que créer des revenus semi-passifs est accessible quel que soit votre point de départ.
                     </p>
-                    <a href="ressources.html#preferes" class="btn btn-secondary btn-sm">En savoir plus</a>
+                    <a href="ressources.html#preferes" class="btn btn-secondary btn-sm" data-i18n="approaches.btn">En
+                        savoir plus</a>
                 </div>
 
             </div>
@@ -185,57 +205,57 @@
         <section id="solutions" class="services">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Solutions</span>
-                    <h2>Un accompagnement adapté à tes besoins</h2>
+                    <span class="section-tag" data-i18n="solutions.tag">Solutions</span>
+                    <h2 data-i18n="solutions.title">Un accompagnement adapté à tes besoins</h2>
                 </div>
 
                 <div class="services-grid">
                     <div class="service-card">
-                        <h3>Essentiel Lite</h3>
-                        <p class="price">90€</p>
+                        <h3 data-i18n="solution.1.title">Essentiel Lite</h3>
+                        <p class="price" data-i18n="solution.1.price">90€</p>
                         <ul class="service-features">
-                            <li>Analyse de ta situation actuelle</li>
-                            <li>Identification des "fuites" budgétaires</li>
-                            <li>Plan d'action immédiat</li>
-                            <li>1 séance de 1h</li>
+                            <li data-i18n="solution.1.feature1">Analyse de ta situation actuelle</li>
+                            <li data-i18n="solution.1.feature2">Identification des "fuites" budgétaires</li>
+                            <li data-i18n="solution.1.feature3">Plan d'action immédiat</li>
+                            <li data-i18n="solution.1.feature4">1 séance de 1h</li>
                         </ul>
-                        <a href="#contact" class="btn btn-outline">Choisir</a>
+                        <a href="#contact" class="btn btn-outline" data-i18n="solutions.btn.choose">Choisir</a>
                     </div>
                     <div class="service-card">
-                        <h3>Audit Flash</h3>
-                        <p class="price">250€</p>
+                        <h3 data-i18n="solution.2.title">Audit Flash</h3>
+                        <p class="price" data-i18n="solution.2.price">250€</p>
                         <ul class="service-features">
-                            <li>Analyse detaillée de ta situation actuelle</li>
-                            <li>Solutions adaptées à tes objectifs</li>
-                            <li>Plan d'action immédiat</li>
-                            <li>3 séances de coaching</li>
+                            <li data-i18n="solution.2.feature1">Analyse detaillée de ta situation actuelle</li>
+                            <li data-i18n="solution.2.feature2">Solutions adaptées à tes objectifs</li>
+                            <li data-i18n="solution.2.feature3">Plan d'action immédiat</li>
+                            <li data-i18n="solution.2.feature4">3 séances de coaching</li>
                         </ul>
-                        <a href="#contact" class="btn btn-outline">Choisir</a>
+                        <a href="#contact" class="btn btn-outline" data-i18n="solutions.btn.choose">Choisir</a>
                     </div>
 
                     <div class="service-card featured">
-                        <div class="badge">Le plus populaire</div>
-                        <h3>Sérénité Totale</h3>
-                        <p class="price">850€</p>
+                        <div class="badge" data-i18n="solutions.badge">Le plus populaire</div>
+                        <h3 data-i18n="solution.3.title">Sérénité Totale</h3>
+                        <p class="price" data-i18n="solution.3.price">850€</p>
                         <ul class="service-features">
-                            <li>Accompagnement sur 3 mois</li>
-                            <li>Budget, Épargne & Investissement</li>
-                            <li>Guide de l'investissement en Bourse</li>
-                            <li>6 séances de coaching</li>
+                            <li data-i18n="solution.3.feature1">Accompagnement sur 3 mois</li>
+                            <li data-i18n="solution.3.feature2">Budget, Épargne & Investissement</li>
+                            <li data-i18n="solution.3.feature3">Guide de l'investissement en Bourse</li>
+                            <li data-i18n="solution.3.feature4">6 séances de coaching</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Choisir</a>
+                        <a href="#contact" class="btn btn-primary" data-i18n="solutions.btn.choose">Choisir</a>
                     </div>
 
                     <div class="service-card">
-                        <h3>Stratégie Patrimoine</h3>
-                        <p class="price">Sur devis</p>
+                        <h3 data-i18n="solution.4.title">Stratégie Patrimoine</h3>
+                        <p class="price" data-i18n="solution.4.price">Sur devis</p>
                         <ul class="service-features">
-                            <li>Pour les objectifs complexes</li>
-                            <li>Immobilier, Bourse, Retraite</li>
-                            <li>Optimisation fiscale simple</li>
-                            <li>Accompagnement annuel</li>
+                            <li data-i18n="solution.4.feature1">Pour les objectifs complexes</li>
+                            <li data-i18n="solution.4.feature2">Immobilier, Bourse, Retraite</li>
+                            <li data-i18n="solution.4.feature3">Optimisation fiscale simple</li>
+                            <li data-i18n="solution.4.feature4">Accompagnement annuel</li>
                         </ul>
-                        <a href="#contact" class="btn btn-outline">Me contacter</a>
+                        <a href="#contact" class="btn btn-outline" data-i18n="solutions.btn.contact">Me contacter</a>
                     </div>
                 </div>
             </div>
@@ -244,53 +264,66 @@
         <section id="a-propos" class="about">
             <div class="container about-wrapper">
                 <div class="about-content" style="text-align: justify;">
-                    <span class="section-tag">À propos</span>
-                    <h2 style="text-align: center;">Une approche simple et humaine de la finance personnelle</h2>
-                    <p>Pendant plus de quinze ans, j’ai travaillé en banque et en finance. J’y ai appris à analyser des
+                    <span class="section-tag" data-i18n="about.tag">À propos</span>
+                    <h2 style="text-align: center;" data-i18n="about.title">Une approche simple et humaine de la finance
+                        personnelle</h2>
+                    <p data-i18n="about.p1">Pendant plus de quinze ans, j’ai travaillé en banque et en finance. J’y ai
+                        appris à analyser des
                         chiffres, auditer des produits, des stratégies, être organisée… mais surtout à observer une
                         réalité essentielle: l’argent n’est jamais qu’une question de chiffres. C’est une question de
                         choix, d’habitudes, et de ce que l’on veut vraiment pour sa vie.</p>
-                    <p>Très naturellement, mes amis et mes proches ont commencé à venir me voir. Certains vivaient au
+                    <p data-i18n="about.p2">Très naturellement, mes amis et mes proches ont commencé à venir me voir.
+                        Certains vivaient au
                         mois le mois et n’arrivaient pas à mettre de l’argent de côté. D’autres avaient déjà une
                         épargne, mais la laissaient dormir faute de savoir quoi en faire. Tous avaient la même
                         frustration : <i>“Je gagne de l’argent, mais je ne sais pas comment l’optimiser.”</i></p>
-                    <p>Et ce sentiment est normal. On ne nous apprend pas à gérer notre argent. Personne ne nous
+                    <p data-i18n="about.p3">Et ce sentiment est normal. On ne nous apprend pas à gérer notre argent.
+                        Personne ne nous
                         explique comment économiser sans se priver, créer une épargne solide, ou investir de manière
                         simple et progressive. Résultat : on doute, on procrastine, on se sent parfois en retard… alors
                         qu’il n’est jamais trop tard pour bien faire.</p>
-                    <p>Aujourd’hui, j’accompagne celles et ceux qui veulent reprendre le contrôle de leurs finances,
+                    <p data-i18n="about.p4">Aujourd’hui, j’accompagne celles et ceux qui veulent reprendre le contrôle
+                        de leurs finances,
                         que tu partes de zéro ou que tu aies déjà de l’épargne. Ensemble, on pose des bases claires, on
                         structure ton argent, et on avance pas à pas vers l’investissement et la création de patrimoine
                         — sans pression, sans jargon, et surtout sans culpabilité.</p>
-                    <p>Parce que bien gérer son argent, ce n’est pas se restreindre. C’est se donner plus de liberté,
+                    <p data-i18n="about.p5">Parce que bien gérer son argent, ce n’est pas se restreindre. C’est se
+                        donner plus de liberté,
                         plus de choix et plus de sérénité pour l’avenir.</p>
-                    <p>Mon accompagnement est pensé pour toi, tes objectifs et ta réalité. On avance ensemble, à ton
+                    <p data-i18n="about.p6">Mon accompagnement est pensé pour toi, tes objectifs et ta réalité. On
+                        avance ensemble, à ton
                         rythme.</p>
-                    <p>Je t’aide à améliorer ta santé financière grâce à :<br>
+                    <p data-i18n="about.methods.intro">Je t’aide à améliorer ta santé financière grâce à :<br>
                     <ol class="about-section">
-                        <li>des méthodes simples et concrètes, faciles à appliquer au quotidien</li>
-                        <li>un accompagnement pas à pas, pour ne jamais te sentir seul</li>
-                        <li>une approche sans jugement, tournée vers le long terme et la sérénité</li>
+                        <li data-i18n="about.method.1">des méthodes simples et concrètes, faciles à appliquer au
+                            quotidien</li>
+                        <li data-i18n="about.method.2">un accompagnement pas à pas, pour ne jamais te sentir seul</li>
+                        <li data-i18n="about.method.3">une approche sans jugement, tournée vers le long terme et la
+                            sérénité</li>
                     </ol>
                     </p>
 
                     <p>
-                    <h3>Ma mission?</h3>
+                    <h3 data-i18n="about.mission.title">Ma mission?</h3>
                     </p>
-                    <p>T’aider à te sentir enfin à l’aise avec ton argent.
+                    <p data-i18n="about.mission.text">T’aider à te sentir enfin à l’aise avec ton argent.
                         À comprendre ce que tu fais, pourquoi tu le fais, et à avancer sereinement — que tu sois en
                         train de créer ton épargne ou de la faire grandir.
                     </p>
                     <p>
-                    <h3>Pour qui?</h3>
+                    <h3 data-i18n="about.forwho.title">Pour qui?</h3>
                     </p>
-                    <p>Cet accompagnement est fait pour toi si tu :</p>
+                    <p data-i18n="about.forwho.text">Cet accompagnement est fait pour toi si tu :</p>
                     <ol class="about-section">
-                        <li>veux mieux comprendre ton argent et reprendre le contrôle de ta situation financière</li>
-                        <li>te sens parfois dépassé·e ou stressé·e par les questions d’argent</li>
-                        <li>gagnes correctement ta vie ou traverses une période financière plus fragile</li>
-                        <li>cherches des solutions concrètes, accessibles et durables</li>
-                        <li>souhaites avancer vers plus de sérénité et d’autonomie financière, à ton rythme</li>
+                        <li data-i18n="about.target.1">veux mieux comprendre ton argent et reprendre le contrôle de ta
+                            situation financière</li>
+                        <li data-i18n="about.target.2">te sens parfois dépassé·e ou stressé·e par les questions d’argent
+                        </li>
+                        <li data-i18n="about.target.3">gagnes correctement ta vie ou traverses une période financière
+                            plus fragile</li>
+                        <li data-i18n="about.target.4">cherches des solutions concrètes, accessibles et durables</li>
+                        <li data-i18n="about.target.5">souhaites avancer vers plus de sérénité et d’autonomie
+                            financière, à ton rythme</li>
                     </ol>
                 </div>
                 <div class="about-image-placeholder">
@@ -310,12 +343,13 @@
         <section id="contact" class="contact">
             <div class="container contact-wrapper">
                 <div class="contact-info" style="text-align: justify;">
-                    <h2>Parlons de ton avenir.</h2>
-                    <p>Réserve ton appel découverte gratuit. C'est un échange découverte qui servira à comprendre ta
+                    <h2 data-i18n="contact.title">Parlons de ton avenir.</h2>
+                    <p data-i18n="contact.text1">Réserve ton appel découverte gratuit. C'est un échange découverte qui
+                        servira à comprendre ta
                         situation, répondre à tes questions et voir si un accompagnement peut t’aider. Sans engagement,
                         c'est toi qui décide si tu veux continuer.
                     </p>
-                    <p> Ce que tu partages reste entre nous, 100% confidentiel.</p>
+                    <p data-i18n="contact.text2"> Ce que tu partages reste entre nous, 100% confidentiel.</p>
                     <ul class="contact-details" style="color: var(--primary-color);">
                         <li>📧 contact@fizenlab.com</li>
 
@@ -323,19 +357,21 @@
                 </div>
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label for="name">Prénom</label>
-                        <input type="text" id="name" required placeholder="Votre prénom">
+                        <label for="name" data-i18n="contact.form.name">Prénom</label>
+                        <input type="text" id="name" required data-i18n="contact.form.placeholder.name"
+                            placeholder="Votre prénom">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required placeholder="contact@fizenlab.com">
+                        <label for="email" data-i18n="contact.form.email">Email</label>
+                        <input type="email" id="email" required data-i18n="contact.form.placeholder.email"
+                            placeholder="contact@fizenlab.com">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="4"
+                        <label for="message" data-i18n="contact.form.message">Message</label>
+                        <textarea id="message" rows="4" data-i18n="contact.form.placeholder.message"
                             placeholder="Dis-moi en quelques mots ton challenge actuel..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+                    <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.btn">Envoyer</button>
                 </form>
             </div>
         </section>
@@ -346,18 +382,15 @@
             <div class="footer-logo">
                 <img src="images/Logo Brand1.png" alt="FiZenLab Logo" class="logo-image footer-img">
             </div>
-            <p class="copyright">© 2026 FiZenLab. Tous droits réservés.</p>
+            <p class="copyright" data-i18n="footer.rights">© 2026 FiZenLab. Tous droits réservés.</p>
             <div class="social-links">
-                <a href="#">LinkedIn</a>
+                <a href="#" data-i18n="footer.linkedin">LinkedIn</a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="translation.js"></script>
-    <div id="google_translate_element"></div>
-    <script type="text/javascript"
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="translations.js"></script>
 </body>
 
 </html>

@@ -27,10 +27,21 @@
 
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="index.html#Approches" class="nav-link">Approches</a></li>
-                    <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
-                    <li><a href="index.html#a-propos" class="nav-link">À Propos</a></li>
-                    <li><a href="index.html#login" class="btn btn-primary btn-block">Se connecter</a></li>
+                    <li><a href="index.html#Approches" class="nav-link" data-i18n="nav.approches">Approches</a></li>
+                    <li><a href="index.html#solutions" class="nav-link" data-i18n="nav.solutions">Solutions</a></li>
+                    <li><a href="index.html#a-propos" class="nav-link" data-i18n="nav.apropos">À Propos</a></li>
+
+                    <!-- Language Switcher -->
+                    <li class="lang-switcher">
+                        <span class="current-lang" id="currentLang">🇫🇷</span>
+                        <div class="lang-dropdown">
+                            <div class="lang-option" onclick="setLanguage('fr')">🇫🇷</div>
+                            <div class="lang-option" onclick="setLanguage('en')">🇺🇸</div>
+                        </div>
+                    </li>
+
+                    <li><a href="index.html#login" class="btn btn-primary btn-block" data-i18n="nav.login">Se
+                            connecter</a></li>
                 </ul>
             </nav>
 
@@ -45,9 +56,12 @@
     <main>
         <section class="questionnaire-hero">
             <div class="container">
-                <h1 class="hero-title" style="color: var(--color-primary); margin-top: 100px;">Votre Bilan <span
-                        class="accent-text">Santé Financière</span></h1>
-                <p class="hero-subtitle" style="color: var(--color-text-light);">Répondez à ces quelques questions pour
+                <h1 class="hero-title" style="color: var(--color-primary); margin-top: 100px;">
+                    <span data-i18n="quiz.hero.title">Votre Bilan</span> <span class="accent-text"
+                        data-i18n="quiz.hero.title.accent">Santé Financière</span>
+                </h1>
+                <p class="hero-subtitle" style="color: var(--color-text-light);" data-i18n="quiz.hero.subtitle">Répondez
+                    à ces quelques questions pour
                     faire le point sur votre situation.</p>
             </div>
         </section>
@@ -58,208 +72,243 @@
 
                     <!-- Section 1 -->
                     <div class="quiz-section">
-                        <h2>1. Situation générale</h2>
+                        <h2 data-i18n="quiz.section.1">1. Situation générale</h2>
 
                         <div class="question-group">
-                            <p class="question-text">1. Quelle est votre situation ?</p>
-                            <label class="option-label"><input type="radio" name="q1" value="seule"> Personne
-                                seule</label>
-                            <label class="option-label"><input type="radio" name="q1" value="couple"> Couple</label>
-                            <label class="option-label"><input type="radio" name="q1" value="autre"> Autre</label>
+                            <p class="question-text" data-i18n="quiz.q1.text">1. Quelle est votre situation ?</p>
+                            <label class="option-label"><input type="radio" name="q1" value="seule"><span
+                                    data-i18n="quiz.q1.o1"> Personne
+                                    seule</span></label>
+                            <label class="option-label"><input type="radio" name="q1" value="couple"><span
+                                    data-i18n="quiz.q1.o2"> Couple</span></label>
+                            <label class="option-label"><input type="radio" name="q1" value="autre"><span
+                                    data-i18n="quiz.q1.o3"> Autre</span></label>
                         </div>
 
                         <div class="question-group">
-                            <p class="question-text">2. Votre situation professionnelle principale :</p>
-                            <label class="option-label"><input type="radio" name="q2" value="salarie">
-                                Salarié(e)</label>
-                            <label class="option-label"><input type="radio" name="q2" value="independant">
-                                Indépendant(e)</label>
-                            <label class="option-label"><input type="radio" name="q2" value="mixte"> Mixte</label>
-                            <label class="option-label"><input type="radio" name="q2" value="autre"> Autre</label>
+                            <p class="question-text" data-i18n="quiz.q2.text">2. Votre situation professionnelle
+                                principale :</p>
+                            <label class="option-label"><input type="radio" name="q2" value="salarie"><span
+                                    data-i18n="quiz.q2.o1">
+                                    Salarié(e)</span></label>
+                            <label class="option-label"><input type="radio" name="q2" value="independant"><span
+                                    data-i18n="quiz.q2.o2">
+                                    Indépendant(e)</span></label>
+                            <label class="option-label"><input type="radio" name="q2" value="mixte"><span
+                                    data-i18n="quiz.q2.o3"> Mixte</span></label>
+                            <label class="option-label"><input type="radio" name="q2" value="autre"><span
+                                    data-i18n="quiz.q2.o4"> Autre</span></label>
                         </div>
 
                         <div class="question-group">
-                            <p class="question-text">3. Votre revenu mensuel net du foyer est plutôt :</p>
-                            <label class="option-label"><input type="radio" name="q3" value="stable"> Stable</label>
-                            <label class="option-label"><input type="radio" name="q3" value="variable"> Variable</label>
-                            <label class="option-label"><input type="radio" name="q3" value="melange"> Un mélange des
-                                deux</label>
+                            <p class="question-text" data-i18n="quiz.q3.text">3. Votre revenu mensuel net du foyer est
+                                plutôt :</p>
+                            <label class="option-label"><input type="radio" name="q3" value="stable"><span
+                                    data-i18n="quiz.q3.o1"> Stable</span></label>
+                            <label class="option-label"><input type="radio" name="q3" value="variable"><span
+                                    data-i18n="quiz.q3.o2"> Variable</span></label>
+                            <label class="option-label"><input type="radio" name="q3" value="melange"><span
+                                    data-i18n="quiz.q3.o3"> Un mélange des
+                                    deux</span></label>
                         </div>
                     </div>
 
                     <!-- Section 2 -->
                     <div class="quiz-section">
-                        <h2>2. Gestion du quotidien</h2>
+                        <h2 data-i18n="quiz.section.2">2. Gestion du quotidien</h2>
 
                         <div class="question-group">
-                            <p class="question-text">4. Avez-vous une vision claire de vos revenus et dépenses
+                            <p class="question-text" data-i18n="quiz.q4.text">4. Avez-vous une vision claire de vos
+                                revenus et dépenses
                                 mensuelles ?</p>
                             <label class="option-label"><input type="radio" name="q4" value="tres_claire"
-                                    data-score="3"> Oui, très
-                                claire</label>
+                                    data-score="3"> <span data-i18n="quiz.q4.o1">Oui, très
+                                    claire</span></label>
                             <label class="option-label"><input type="radio" name="q4" value="a_peu_pres" data-score="2">
-                                À peu
-                                près</label>
+                                <span data-i18n="quiz.q4.o2">À peu
+                                    près</span></label>
                             <label class="option-label"><input type="radio" name="q4" value="pas_vraiment"
-                                    data-score="1"> Pas
-                                vraiment</label>
+                                    data-score="1"> <span data-i18n="quiz.q4.o3">Pas
+                                    vraiment</span></label>
                             <label class="option-label"><input type="radio" name="q4" value="pas_du_tout"
-                                    data-score="0"> Pas du
-                                tout</label>
+                                    data-score="0"> <span data-i18n="quiz.q4.o4">Pas du
+                                    tout</span></label>
                         </div>
 
                         <div class="question-group">
-                            <p class="question-text">5. En fin de mois, votre situation est généralement :</p>
+                            <p class="question-text" data-i18n="quiz.q5.text">5. En fin de mois, votre situation est
+                                généralement :</p>
                             <label class="option-label"><input type="radio" name="q5" value="confortable"
                                     data-score="3">
-                                Confortable</label>
+                                <span data-i18n="quiz.q5.o1">Confortable</span></label>
                             <label class="option-label"><input type="radio" name="q5" value="equilibree" data-score="2">
-                                Équilibrée</label>
+                                <span data-i18n="quiz.q5.o2">Équilibrée</span></label>
                             <label class="option-label"><input type="radio" name="q5" value="tendue" data-score="1">
-                                Tendue</label>
+                                <span data-i18n="quiz.q5.o3">Tendue</span></label>
                             <label class="option-label"><input type="radio" name="q5" value="stressante" data-score="0">
-                                Stressante</label>
+                                <span data-i18n="quiz.q5.o4">Stressante</span></label>
                         </div>
 
                         <div class="question-group">
-                            <p class="question-text">6. Suivez-vous vos dépenses (outil, application, notes, etc.) ?</p>
+                            <p class="question-text" data-i18n="quiz.q6.text">6. Suivez-vous vos dépenses (outil,
+                                application, notes, etc.) ?</p>
                             <label class="option-label"><input type="radio" name="q6" value="regulierement"
-                                    data-score="3"> Oui,
-                                régulièrement</label>
+                                    data-score="3"> <span data-i18n="quiz.q6.o1">Oui,
+                                    régulièrement</span></label>
                             <label class="option-label"><input type="radio" name="q6" value="temps_en_temps"
-                                    data-score="2"> De temps
-                                en temps</label>
+                                    data-score="2"> <span data-i18n="quiz.q6.o2">De temps
+                                    en temps</span></label>
                             <label class="option-label"><input type="radio" name="q6" value="rarement" data-score="1">
-                                Rarement</label>
+                                <span data-i18n="quiz.q6.o3">Rarement</span></label>
                             <label class="option-label"><input type="radio" name="q6" value="jamais" data-score="0">
-                                Jamais</label>
+                                <span data-i18n="quiz.q6.o4">Jamais</span></label>
                         </div>
                     </div>
 
                     <!-- Section 3 -->
                     <div class="quiz-section">
-                        <h2>3. Épargne et sécurité</h2>
+                        <h2 data-i18n="quiz.section.3">3. Épargne et sécurité</h2>
 
                         <div class="question-group">
-                            <p class="question-text">7. Avez-vous une épargne en cas d’imprévus ?</p>
+                            <p class="question-text" data-i18n="quiz.q7.text">7. Avez-vous une épargne en cas d’imprévus
+                                ?</p>
                             <label class="option-label"><input type="radio" name="q7" value="oui_suffisante"
-                                    data-score="3"> Oui, suffisante</label>
+                                    data-score="3"> <span data-i18n="quiz.q7.o1">Oui, suffisante</span></label>
                             <label class="option-label"><input type="radio" name="q7" value="oui_insuffisante"
-                                    data-score="2"> Oui, mais insuffisante</label>
+                                    data-score="2"> <span data-i18n="quiz.q7.o2">Oui, mais insuffisante</span></label>
                             <label class="option-label"><input type="radio" name="q7" value="non" data-score="0">
-                                Non</label>
+                                <span data-i18n="quiz.q7.o3">Non</span></label>
                         </div>
 
                         <div class="question-group">
-                            <p class="question-text">8. Épargnez-vous de manière régulière ?</p>
+                            <p class="question-text" data-i18n="quiz.q8.text">8. Épargnez-vous de manière régulière ?
+                            </p>
                             <label class="option-label"><input type="radio" name="q8" value="oui_auto" data-score="3">
-                                Oui, automatiquement</label>
+                                <span data-i18n="quiz.q8.o1">Oui, automatiquement</span></label>
                             <label class="option-label"><input type="radio" name="q8" value="oui_possible"
-                                    data-score="2"> Oui, quand c’est possible</label>
+                                    data-score="2"> <span data-i18n="quiz.q8.o2">Oui, quand c’est
+                                    possible</span></label>
                             <label class="option-label"><input type="radio" name="q8" value="rarement" data-score="1">
-                                Rarement</label>
+                                <span data-i18n="quiz.q8.o3">Rarement</span></label>
                             <label class="option-label"><input type="radio" name="q8" value="jamais" data-score="0">
-                                Jamais</label>
+                                <span data-i18n="quiz.q8.o4">Jamais</span></label>
                         </div>
 
                         <div class="question-group">
-                            <p class="question-text">9. En cas de dépense imprévue importante, votre ressenti serait
+                            <p class="question-text" data-i18n="quiz.q9.text">9. En cas de dépense imprévue importante,
+                                votre ressenti serait
                                 plutôt :</p>
                             <label class="option-label"><input type="radio" name="q9" value="serein" data-score="3">
-                                Serein(e)</label>
-                            <label class="option-label"><input type="radio" name="q9" value="inquiet" data-score="2"> Un
-                                peu inquiet(e)</label>
+                                <span data-i18n="quiz.q9.o1">Serein(e)</span></label>
+                            <label class="option-label"><input type="radio" name="q9" value="inquiet" data-score="2">
+                                <span data-i18n="quiz.q9.o2">Un
+                                    peu inquiet(e)</span></label>
                             <label class="option-label"><input type="radio" name="q9" value="stresse" data-score="0">
-                                Très stressé(e)</label>
+                                <span data-i18n="quiz.q9.o3">Très stressé(e)</span></label>
                         </div>
                     </div>
 
                     <!-- Section 4 -->
                     <div class="quiz-section">
-                        <h2>4. Dettes et engagements</h2>
+                        <h2 data-i18n="quiz.section.4">4. Dettes et engagements</h2>
 
                         <div class="question-group">
-                            <p class="question-text">10. Avez-vous actuellement des crédits ou dettes en cours ?</p>
-                            <label class="option-label"><input type="radio" name="q10" value="aucun"> Aucun</label>
-                            <label class="option-label"><input type="radio" name="q10" value="immo"> Crédit
-                                immobilier</label>
-                            <label class="option-label"><input type="radio" name="q10" value="conso"> Crédit
-                                consommation</label>
-                            <label class="option-label"><input type="radio" name="q10" value="autres"> Autres</label>
+                            <p class="question-text" data-i18n="quiz.q10.text">10. Avez-vous actuellement des crédits ou
+                                dettes en cours ?</p>
+                            <label class="option-label"><input type="radio" name="q10" value="aucun"> <span
+                                    data-i18n="quiz.q10.o1">Aucun</span></label>
+                            <label class="option-label"><input type="radio" name="q10" value="immo"> <span
+                                    data-i18n="quiz.q10.o2">Crédit
+                                    immobilier</span></label>
+                            <label class="option-label"><input type="radio" name="q10" value="conso"> <span
+                                    data-i18n="quiz.q10.o3">Crédit
+                                    consommation</span></label>
+                            <label class="option-label"><input type="radio" name="q10" value="autres"> <span
+                                    data-i18n="quiz.q10.o4">Autres</span></label>
                         </div>
 
                         <div class="question-group">
-                            <p class="question-text">11. Le poids de ces engagements est pour vous :</p>
+                            <p class="question-text" data-i18n="quiz.q11.text">11. Le poids de ces engagements est pour
+                                vous :</p>
                             <label class="option-label"><input type="radio" name="q11" value="facile" data-score="3">
-                                Facile à gérer</label>
+                                <span data-i18n="quiz.q11.o1">Facile à gérer</span></label>
                             <label class="option-label"><input type="radio" name="q11" value="supportable"
-                                    data-score="2"> Supportable</label>
+                                    data-score="2"> <span data-i18n="quiz.q11.o2">Supportable</span></label>
                             <label class="option-label"><input type="radio" name="q11" value="lourd" data-score="1">
-                                Lourd</label>
+                                <span data-i18n="quiz.q11.o3">Lourd</span></label>
                             <label class="option-label"><input type="radio" name="q11" value="tres_lourd"
-                                    data-score="0"> Très lourd</label>
+                                    data-score="0"> <span data-i18n="quiz.q11.o4">Très lourd</span></label>
                         </div>
                     </div>
 
                     <!-- Section 5 -->
                     <div class="quiz-section">
-                        <h2>5. Relation à l’argent</h2>
+                        <h2 data-i18n="quiz.section.5">5. Relation à l’argent</h2>
 
                         <div class="question-group">
-                            <p class="question-text">12. Aujourd’hui, votre relation à l’argent est plutôt :</p>
+                            <p class="question-text" data-i18n="quiz.q12.text">12. Aujourd’hui, votre relation à
+                                l’argent est plutôt :</p>
                             <label class="option-label"><input type="radio" name="q12" value="sereine" data-score="3">
-                                Sereine</label>
+                                <span data-i18n="quiz.q12.o1">Sereine</span></label>
                             <label class="option-label"><input type="radio" name="q12" value="neutre" data-score="2">
-                                Neutre</label>
+                                <span data-i18n="quiz.q12.o2">Neutre</span></label>
                             <label class="option-label"><input type="radio" name="q12" value="stress" data-score="1">
-                                Source de stress</label>
+                                <span data-i18n="quiz.q12.o3">Source de stress</span></label>
                             <label class="option-label"><input type="radio" name="q12" value="anxiete" data-score="0">
-                                Source d’anxiété</label>
+                                <span data-i18n="quiz.q12.o4">Source d’anxiété</span></label>
                         </div>
 
                         <div class="question-group">
-                            <p class="question-text">13. Avez-vous l’impression de subir vos finances plutôt que de les
+                            <p class="question-text" data-i18n="quiz.q13.text">13. Avez-vous l’impression de subir vos
+                                finances plutôt que de les
                                 choisir ?</p>
                             <label class="option-label"><input type="radio" name="q13" value="non" data-score="3">
-                                Non</label>
+                                <span data-i18n="quiz.q13.o1">Non</span></label>
                             <label class="option-label"><input type="radio" name="q13" value="parfois" data-score="2">
-                                Parfois</label>
+                                <span data-i18n="quiz.q13.o2">Parfois</span></label>
                             <label class="option-label"><input type="radio" name="q13" value="oui" data-score="0">
-                                Oui</label>
+                                <span data-i18n="quiz.q13.o3">Oui</span></label>
                         </div>
 
                         <div class="question-group">
-                            <p class="question-text">14. Parler d’argent dans votre foyer est :</p>
+                            <p class="question-text" data-i18n="quiz.q14.text">14. Parler d’argent dans votre foyer est
+                                :</p>
                             <label class="option-label"><input type="radio" name="q14" value="facile" data-score="3">
-                                Facile</label>
+                                <span data-i18n="quiz.q14.o1">Facile</span></label>
                             <label class="option-label"><input type="radio" name="q14" value="delicat" data-score="2">
-                                Possible mais délicat</label>
+                                <span data-i18n="quiz.q14.o2">Possible mais délicat</span></label>
                             <label class="option-label"><input type="radio" name="q14" value="difficile" data-score="0">
-                                Difficile</label>
+                                <span data-i18n="quiz.q14.o3">Difficile</span></label>
                         </div>
                     </div>
 
                     <!-- Section 6 -->
                     <div class="quiz-section">
-                        <h2>6. Objectifs et attentes</h2>
+                        <h2 data-i18n="quiz.section.6">6. Objectifs et attentes</h2>
 
                         <div class="question-group">
-                            <p class="question-text">15. Quel est votre objectif principal aujourd’hui ? (plusieurs
+                            <p class="question-text" data-i18n="quiz.q15.text">15. Quel est votre objectif principal
+                                aujourd’hui ? (plusieurs
                                 réponses possibles)</p>
-                            <label class="option-label"><input type="checkbox" name="q15" value="comprendre"> Mieux
-                                comprendre ma situation</label>
+                            <label class="option-label"><input type="checkbox" name="q15" value="comprendre"> <span
+                                    data-i18n="quiz.q15.o1"> Mieux
+                                    comprendre ma situation</span></label>
                             <label class="option-label"><input type="checkbox" name="q15" value="reduire_stress">
-                                Réduire le stress financier</label>
-                            <label class="option-label"><input type="checkbox" name="q15" value="epargner"> Épargner
-                                davantage</label>
-                            <label class="option-label"><input type="checkbox" name="q15" value="anticiper"> Mieux
-                                anticiper l’avenir</label>
-                            <label class="option-label"><input type="checkbox" name="q15" value="habitudes"> Mettre en
-                                place des habitudes durables</label>
+                                <span data-i18n="quiz.q15.o2"> Réduire le stress financier</span></label>
+                            <label class="option-label"><input type="checkbox" name="q15" value="epargner"> <span
+                                    data-i18n="quiz.q15.o3"> Épargner
+                                    davantage</span></label>
+                            <label class="option-label"><input type="checkbox" name="q15" value="anticiper"> <span
+                                    data-i18n="quiz.q15.o4"> Mieux
+                                    anticiper l’avenir</span></label>
+                            <label class="option-label"><input type="checkbox" name="q15" value="habitudes"> <span
+                                    data-i18n="quiz.q15.o5"> Mettre en
+                                    place des habitudes durables</span></label>
                         </div>
 
                         <div class="question-group">
-                            <p class="question-text">16. Sur une échelle de 1 à 10, à quel point souhaitez-vous
+                            <p class="question-text" data-i18n="quiz.q16.text">16. Sur une échelle de 1 à 10, à quel
+                                point souhaitez-vous
                                 améliorer votre santé financière ?</p>
                             <div class="scale-options" style="display: flex; gap: 10px; flex-wrap: wrap;">
                                 <label class="scale-label"><input type="radio" name="q16" value="1" data-score="0">
@@ -288,9 +337,10 @@
 
                     <!-- Section 7 -->
                     <div class="quiz-section">
-                        <h2>7. Question ouverte</h2>
+                        <h2 data-i18n="quiz.section.7">7. Question ouverte</h2>
                         <div class="question-group">
-                            <p class="question-text">17. S’il y avait UNE chose que vous aimeriez changer concernant vos
+                            <p class="question-text" data-i18n="quiz.q17.text">17. S’il y avait UNE chose que vous
+                                aimeriez changer concernant vos
                                 finances aujourd’hui, laquelle serait-ce ?</p>
                             <textarea name="q17" rows="3"
                                 style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
@@ -298,7 +348,8 @@
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Voir mes résultats</button>
+                        <button type="submit" class="btn btn-primary" data-i18n="quiz.btn.submit">Voir mes
+                            résultats</button>
                     </div>
                 </form>
             </div>
@@ -310,14 +361,15 @@
             <div class="footer-logo">
                 <img src="images/Logo Brand1.png" alt="FiZenLab Logo" class="logo-image footer-img">
             </div>
-            <p class="copyright">© 2026 FiZenLab. Tous droits réservés.</p>
+            <p class="copyright" data-i18n="footer.rights">© 2026 FiZenLab. Tous droits réservés.</p>
             <div class="social-links">
-                <a href="#">LinkedIn</a>
+                <a href="#" data-i18n="footer.linkedin">LinkedIn</a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script> <!-- Reusing for mobile menu -->
+    <script src="translations.js"></script>
     <script src="questionnaire.js"></script>
 </body>
 
