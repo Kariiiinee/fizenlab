@@ -590,15 +590,34 @@ img {
     .hero {
         text-align: center;
         padding-top: 120px;
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
     }
 
     .hero-content {
-        /* old code  margin: 0 auto; */
-        margin: 0 auto;
+        margin: 0;
+        padding: var(--spacing-sm);
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
     }
 
     .hero-actions {
-        justify-content: center;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
 
