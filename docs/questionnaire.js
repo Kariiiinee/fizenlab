@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Prepare full data for saving
             const resultsData = {
                 timestamp: new Date().toLocaleString(),
-                visitor_name: formData.get('visitor_name'),
-                visitor_age: formData.get('visitor_age'),
+                visitor_name: document.getElementById('visitor_name') ? document.getElementById('visitor_name').value : "Inconnu",
+                visitor_age: document.getElementById('visitor_age') ? document.getElementById('visitor_age').value : "Non précisé",
                 responses: {}
             };
 
@@ -86,14 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        console.log('Sending data to Google Sheets...', data);
+
         try {
-            // Using fetch with no-cors if needed, but standard should work with correct App Script setup
             await fetch(scriptURL, {
                 method: 'POST',
-                mode: 'no-cors', // simpler for basic logging to Sheets
-                cache: 'no-cache',
+                mode: 'no-cors',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'text/plain', // Safer for no-cors
                 },
                 body: JSON.stringify(data)
             });
