@@ -134,17 +134,6 @@ const translations = {
         'resources.nav.6': '6. Mes Approches Préférées',
         'resources.cta.btn': 'Prendre rendez-vous',
 
-        // Resources Page
-        'resources.title': 'Ressources & Approches',
-        'resources.subtitle': 'Explore en détail les piliers de ma méthode.',
-        'resources.nav.1': '1. Bonheur & Argent',
-        'resources.nav.2': '2. L\'argent au quotidien',
-        'resources.nav.3': '3. Economiser',
-        'resources.nav.4': '4. Dépenses',
-        'resources.nav.5': '5. Revenus Semi-Passifs',
-        'resources.nav.6': '6. Mes Approches Préférées',
-        'resources.cta.btn': 'Prendre rendez-vous',
-
         // Section 1: Bonheur & Argent
         'res.sec1.p1': 'Le bonheur est souvent influencé par les expériences personnelles, les contextes et les valeurs. Cependant, le bonheur, c\'est plus que simplement avoir de l\'argent. De nombreuses études montrent que si la précarité nuit au bonheur, l\'accumulation excessive de richesses ne l\'augmente pas proportionnellement.',
         'res.sec1.p2': 'Mon approche vise à aligner tes finances avec ce qui te rend réellement heureux. Il s\'agit de dépenser en conscience pour des expériences et des choses qui ont du sens pour toi, plutôt que pour le statut social ou par habitude, c\'est a dire:',
