@@ -86,18 +86,23 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        console.log('Sending data to Google Sheets:', data);
+
         try {
-            // Using fetch with no-cors if needed, but standard should work with correct App Script setup
-            await fetch(scriptURL, {
+            const response = await fetch(scriptURL, {
                 method: 'POST',
-                mode: 'no-cors', // simpler for basic logging to Sheets
                 cache: 'no-cache',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data)
             });
-            console.log('Results successfully sent');
+
+            if (response.ok) {
+                console.log('Results successfully sent');
+            } else {
+                console.error('Server responded with an error:', response.statusText);
+            }
         } catch (error) {
             console.error('Error saving results:', error);
         }
