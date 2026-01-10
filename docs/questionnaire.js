@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function saveResultsToGoogleSheet(data) {
         // REPLACE THIS URL with your Google Apps Script Web App URL
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwoy_KCW1K45QK8op3lD8NDrF9G6GoWwe69BdcUi9VEbaAiEu1_TmvIMAxcWti0a7UWAg/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwGHB_uFB335idaP7GFnUkiXyBIWb6LgjFx0ZkQEJCQz48DHOJfMUcEavAzvWxM188C/exec';
 
         if (!scriptURL || scriptURL.includes('YOUR_GOOGLE_APPS_SCRIPT_URL_HERE')) {
             console.log('Results collected but not sent: scriptURL not configured.', data);
