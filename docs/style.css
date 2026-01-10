@@ -217,7 +217,7 @@ img {
     /* Header height + spacing */
     padding-bottom: var(--spacing-xl);
     background-color: var(--color-primary);
-    min-height: 90vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -227,7 +227,7 @@ img {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 850px;
+    max-width: 750px;
     padding: var(--spacing-md);
     background: rgba(0, 0, 0, 0.4);
     /* Glass effect */
