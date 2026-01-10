@@ -1018,8 +1018,12 @@ img {
     }
 }
 
-/* Hide Google Translate Toolbar */
+/* Hide Google Translate Toolbar and All UI Elements */
 .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+.goog-te-banner-frame {
     display: none !important;
 }
 
@@ -1028,7 +1032,26 @@ body {
 }
 
 #google_translate_element {
-    display: none;
+    display: none !important;
+}
+
+/* Hide the Google Translate widget completely */
+.goog-te-gadget {
+    display: none !important;
+}
+
+/* Hide any floating translation bar */
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+/* Prevent body from shifting when Google Translate loads */
+body.translated-ltr {
+    top: 0 !important;
+}
+
+body.translated-rtl {
+    top: 0 !important;
 }
 
 /* Bonheur Section Images */
