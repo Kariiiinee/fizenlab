@@ -86,23 +86,19 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        console.log('Sending data to Google Sheets:', data);
+        console.log('Sending data to Google Sheets (no-cors mode):', data);
 
         try {
-            const response = await fetch(scriptURL, {
+            await fetch(scriptURL, {
                 method: 'POST',
+                mode: 'no-cors', // Required for Google Apps Script to avoid CORS preflight errors
                 cache: 'no-cache',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data)
             });
-
-            if (response.ok) {
-                console.log('Results successfully sent');
-            } else {
-                console.error('Server responded with an error:', response.statusText);
-            }
+            console.log('Request sent successfully - check your spreadsheet.');
         } catch (error) {
             console.error('Error saving results:', error);
         }
