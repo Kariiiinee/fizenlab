@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Prepare full data for saving
             const resultsData = {
                 timestamp: new Date().toLocaleString(),
-                visitor_name: document.getElementById('visitor_name') ? document.getElementById('visitor_name').value : "Inconnu",
-                visitor_age: document.getElementById('visitor_age') ? document.getElementById('visitor_age').value : "Non précisé",
+                visitor_name: formData.get('visitor_name'),
+                visitor_age: formData.get('visitor_age'),
                 responses: {}
             };
 
@@ -79,21 +79,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function saveResultsToGoogleSheet(data) {
         // REPLACE THIS URL with your Google Apps Script Web App URL
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxVuFmTnpnYT8hi3TWevbSAM7zZRHIA_sOiKbwjO656maGuD5UH3pEKVGtCqLm9-tlHZg/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbycMDvPrTygWuIydyrH_fr301j5OnUq46ltHsln8dn5lmUN4BIYwxzOEzHz8L2hYDNeYA/exec';
 
-        if (!scriptURL || scriptURL.includes('https://script.google.com/macros/s/AKfycbxVuFmTnpnYT8hi3TWevbSAM7zZRHIA_sOiKbwjO656maGuD5UH3pEKVGtCqLm9-tlHZg/exec')) {
+        if (!scriptURL || scriptURL.includes('https://script.google.com/macros/s/AKfycbycMDvPrTygWuIydyrH_fr301j5OnUq46ltHsln8dn5lmUN4BIYwxzOEzHz8L2hYDNeYA/exec')) {
             console.log('Results collected but not sent: scriptURL not configured.', data);
             return;
         }
 
-        console.log('Sending data to Google Sheets...', data);
-
         try {
+            // Using fetch with no-cors if needed, but standard should work with correct App Script setup
             await fetch(scriptURL, {
                 method: 'POST',
-                mode: 'no-cors',
+                mode: 'no-cors', // simpler for basic logging to Sheets
+                cache: 'no-cache',
                 headers: {
-                    'Content-Type': 'text/plain', // Safer for no-cors
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data)
             });
