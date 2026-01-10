@@ -594,7 +594,7 @@ img {
 
     .hero-content {
         /* old code  margin: 0 auto; */
-        margin: 01em;
+        margin: 0 auto;
     }
 
     .hero-actions {
