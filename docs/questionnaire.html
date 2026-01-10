@@ -356,17 +356,17 @@
                                 style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; margin-top: 8px;">
                         </div>
                         <div class="question-group">
-                            <label class="question-text" for="visitor_age" data-i18n="contact.form.age">Tranche
-                                d'âge</label>
-                            <select id="visitor_age" name="visitor_age"
-                                style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; margin-top: 8px;">
-                                <option value="" data-i18n="contact.form.placeholder.age">Choisir...</option>
-                                <option value="18-25">age 18-25</option>
-                                <option value="26-35">age 26-35</option>
-                                <option value="36-45">age 36-45</option>
-                                <option value="46-55">age 46-55</option>
-                                <option value="56+">age 56+</option>
-                            </select>
+                            <p class="question-text" data-i18n="quiz.q18.text">Votre tranche d’âge :</p>
+                            <label class="option-label"><input type="radio" name="visitor_age_group"
+                                    value="under_25"><span data-i18n="quiz.q18.o1"> Moins de 25 ans</span></label>
+                            <label class="option-label"><input type="radio" name="visitor_age_group" value="25_35"><span
+                                    data-i18n="quiz.q18.o2"> 25-35 ans</span></label>
+                            <label class="option-label"><input type="radio" name="visitor_age_group" value="36_45"><span
+                                    data-i18n="quiz.q18.o3"> 36-45 ans</span></label>
+                            <label class="option-label"><input type="radio" name="visitor_age_group" value="46_55"><span
+                                    data-i18n="quiz.q18.o4"> 46-55 ans</span></label>
+                            <label class="option-label"><input type="radio" name="visitor_age_group"
+                                    value="over_55"><span data-i18n="quiz.q18.o5"> Plus de 55 ans</span></label>
                         </div>
                     </div>
 

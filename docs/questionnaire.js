@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const resultsData = {
                 timestamp: new Date().toLocaleString(),
                 visitor_name: formData.get('visitor_name'),
-                visitor_age: formData.get('visitor_age'),
+                visitor_age_group: formData.get('visitor_age_group'),
                 responses: {}
             };
 
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // REPLACE THIS URL with your Google Apps Script Web App URL
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwGHB_uFB335idaP7GFnUkiXyBIWb6LgjFx0ZkQEJCQz48DHOJfMUcEavAzvWxM188C/exec';
 
-        if (!scriptURL || scriptURL.includes('YOUR_GOOGLE_APPS_SCRIPT_URL_HERE')) {
+        if (!scriptURL || scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE' || scriptURL.includes('macros/s/REPLACE_ME')) {
             console.log('Results collected but not sent: scriptURL not configured.', data);
             return;
         }
