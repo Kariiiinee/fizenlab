@@ -86,19 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        console.log('Sending data to Google Sheets (no-cors mode):', data);
-
         try {
+            // Using fetch with no-cors if needed, but standard should work with correct App Script setup
             await fetch(scriptURL, {
                 method: 'POST',
-                mode: 'no-cors', // Required for Google Apps Script to avoid CORS preflight errors
+                mode: 'no-cors', // simpler for basic logging to Sheets
                 cache: 'no-cache',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data)
             });
-            console.log('Request sent successfully - check your spreadsheet.');
+            console.log('Results successfully sent');
         } catch (error) {
             console.error('Error saving results:', error);
         }
