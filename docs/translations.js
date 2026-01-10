@@ -112,10 +112,10 @@ const translations = {
         'contact.text2': 'Ce que tu partages reste entre nous, 100% confidentiel.',
         'contact.email': '📧 contact@fizenlab.com',
         'contact.form.name': 'Prénom',
-        'contact.form.email': 'Email',
-        'contact.form.message': 'Message',
+        'contact.form.age': 'Tranche d\'âge',
         'contact.form.placeholder.name': 'Votre prénom',
-        'contact.form.placeholder.email': 'contact@fizenlab.com',
+        'contact.form.placeholder.age': 'Choisir...',
+        'contact.form.message': 'Message',
         'contact.form.placeholder.message': 'Dis-moi en quelques mots ton challenge actuel...',
         'contact.btn': 'Envoyer',
 
@@ -340,6 +340,7 @@ const translations = {
         'quiz.q16.text': '16. Sur une échelle de 1 à 10, à quel point souhaitez-vous améliorer votre santé financière ?',
         'quiz.section.7': '7. Question ouverte',
         'quiz.q17.text': '17. S’il y avait UNE chose que vous aimeriez changer concernant vos finances aujourd’hui, laquelle serait-ce ?',
+        'quiz.section.8': '8. Pour mes stats uniquement (facultatif)',
         'quiz.btn.submit': 'Voir mes résultats',
     },
     en: {
@@ -454,10 +455,10 @@ const translations = {
         'contact.text2': 'What you share stays between us, 100% confidential.',
         'contact.email': '📧 contact@fizenlab.com',
         'contact.form.name': 'First name',
-        'contact.form.email': 'Email',
-        'contact.form.message': 'Message',
+        'contact.form.age': 'Age group',
         'contact.form.placeholder.name': 'Your first name',
-        'contact.form.placeholder.email': 'contact@fizenlab.com',
+        'contact.form.placeholder.age': 'Choose...',
+        'contact.form.message': 'Message',
         'contact.form.placeholder.message': 'Tell me in a few words your current challenge...',
         'contact.btn': 'Send',
 
@@ -682,6 +683,7 @@ const translations = {
         'quiz.q16.text': '16. On a scale of 1 to 10, how much do you want to improve your financial health?',
         'quiz.section.7': '7. Open question',
         'quiz.q17.text': '17. If there was ONE thing you would like to change about your finances today, what would it be?',
+        'quiz.section.8': '8. For my stats only (optional)',
         'quiz.btn.submit': 'See my results',
     }
 };

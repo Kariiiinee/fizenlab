@@ -8,6 +8,29 @@ document.addEventListener('DOMContentLoaded', () => {
             // 1. Calculate Scores
             const formData = new FormData(form);
 
+            // Prepare full data for saving
+            const resultsData = {
+                timestamp: new Date().toLocaleString(),
+                visitor_name: formData.get('visitor_name'),
+                visitor_age: formData.get('visitor_age'),
+                responses: {}
+            };
+
+            // Collect all responses
+            for (let [key, value] of formData.entries()) {
+                if (key.startsWith('q')) {
+                    if (resultsData.responses[key]) {
+                        // Handle checkboxes (multiple values)
+                        if (!Array.isArray(resultsData.responses[key])) {
+                            resultsData.responses[key] = [resultsData.responses[key]];
+                        }
+                        resultsData.responses[key].push(value);
+                    } else {
+                        resultsData.responses[key] = value;
+                    }
+                }
+            }
+
             // Pillar 1: Clarté financière (Q4, Q5, Q6)
             let p1Score = 0;
             p1Score += parseInt(getScore("q4")) || 0;
@@ -28,30 +51,56 @@ document.addEventListener('DOMContentLoaded', () => {
             p3Score += parseInt(getScore("q14")) || 0;
 
             // Pillar 4: Motivation & engagement (Q15, Q16)
-            // Note: Q15 is checkboxes (not scored in the list but part of pillar text? Let's assume it's participation for now)
-            // Actually, based on logic: Q15 is not in the "choix fermés" list.
-            // Q16 is scale 1-10.
             let p4Score = 0;
             p4Score += parseInt(getScore("q16")) || 0;
-            // Q15 analysis if needed (not affecting score based on provided rules)
 
-            // Global Score (Sum of standard questions 4-14 + 16-if-applicable)
-            // Rules say "Score maximal indicatif : 30 points".
-            // Sum of Max P1(9) + P2(12) + P3(9) = 30.
-            // So Total Score only includes P1, P2, P3. P4 is separate analysis.
             const totalScore = p1Score + p2Score + p3Score;
 
-            // 2. Generate Result Content
+            // Add scores to data
+            resultsData.scores = {
+                total: totalScore,
+                pillars: { p1: p1Score, p2: p2Score, p3: p3Score, p4: p4Score }
+            };
+
+            // 2. Save Results (Async)
+            saveResultsToGoogleSheet(resultsData);
+
+            // 3. Generate Result Content
             const resultHTML = generateResultHTML(totalScore, p1Score, p2Score, p3Score, p4Score);
 
-            // 3. Display Results
-            // Hide form, show results
+            // 4. Display Results
             const contentSection = document.querySelector('.questionnaire-content .container');
             contentSection.innerHTML = resultHTML;
 
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    }
+
+    async function saveResultsToGoogleSheet(data) {
+        // REPLACE THIS URL with your Google Apps Script Web App URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwoy_KCW1K45QK8op3lD8NDrF9G6GoWwe69BdcUi9VEbaAiEu1_TmvIMAxcWti0a7UWAg/exec';
+
+        if (!scriptURL || scriptURL.includes('YOUR_GOOGLE_APPS_SCRIPT_URL_HERE')) {
+            console.log('Results collected but not sent: scriptURL not configured.', data);
+            return;
+        }
+
+        try {
+            // Using fetch with no-cors if needed, but standard should work with correct App Script setup
+            await fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors', // simpler for basic logging to Sheets
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            console.log('Results successfully sent');
+        } catch (error) {
+            console.error('Error saving results:', error);
+        }
     }
 
     function getScore(name) {
