@@ -16,6 +16,7 @@ const translations = {
         'hero.btn.test': 'Je me teste*',
         'hero.btn.resources': 'Explore les ressources',
         'hero.btn.solutions': 'Découvre les solutions',
+        'hero.btn.calendly': 'Prendre RDV directement',
         'hero.disclaimer': '*Le questionnaire est destiné à être utilisé seulement comme un outil d\'auto-évaluation et permet d\'obtenir un premier aperçu de ta santé financière.',
 
         // Approaches Section (Home)
@@ -118,6 +119,7 @@ const translations = {
         'contact.form.placeholder.email': 'contact@fizenlab.com',
         'contact.form.placeholder.message': 'Dis-moi en quelques mots ton challenge actuel...',
         'contact.btn': 'Envoyer',
+        'contact.btn.calendly': 'Prendre RDV directement',
 
         // Footer
         'footer.rights': '© 2026 FiZenLab. Tous droits réservés.',
@@ -341,7 +343,7 @@ const translations = {
         'quiz.section.7': '7. Question ouverte',
         'quiz.q17.text': '17. S’il y avait UNE chose que vous aimeriez changer concernant vos finances aujourd’hui, laquelle serait-ce ?',
         'quiz.section.8': '8. Pour mes stats uniquement (facultatif)',
-        'quiz.q18.text': 'Votre âge :',
+        'quiz.q18.text': 'Votre âge',
         'quiz.q18.o1': 'Âge 18-25',
         'quiz.q18.o2': 'Âge 26-35',
         'quiz.q18.o3': 'Âge 36-45',
@@ -365,6 +367,7 @@ const translations = {
         'hero.btn.test': 'Test yourself*',
         'hero.btn.resources': 'Explore resources',
         'hero.btn.solutions': 'Discover solutions',
+        'hero.btn.calendly': 'Book a meeting directly',
         'hero.disclaimer': '*The questionnaire is intended to be used only as a self-assessment tool and provides a first overview of your financial health.',
 
         // Approaches Section (Home)
@@ -467,6 +470,7 @@ const translations = {
         'contact.form.placeholder.email': 'contact@fizenlab.com',
         'contact.form.placeholder.message': 'Tell me in a few words your current challenge...',
         'contact.btn': 'Send',
+        'contact.btn.calendly': 'Book a meeting directly',
 
         // Footer
         'footer.rights': '© 2026 FiZenLab. All rights reserved.',
@@ -690,7 +694,7 @@ const translations = {
         'quiz.section.7': '7. Open question',
         'quiz.q17.text': '17. If there was ONE thing you would like to change about your finances today, what would it be?',
         'quiz.section.8': '8. For my stats only (optional)',
-        'quiz.q18.text': 'Your age:',
+        'quiz.q18.text': 'Your age',
         'quiz.q18.o1': 'Age 18-25',
         'quiz.q18.o2': 'Age 26-35',
         'quiz.q18.o3': 'Age 36-45',
